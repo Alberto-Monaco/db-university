@@ -12,21 +12,54 @@ Utilizzare https://www.drawio.com/ per la creazione dello schema come visto in c
 
 ## table name:
 
-- dipartimento
-- corso di laurea
+- dipartimenti
+- corsi_laurea
 - materie
-- insegnante
-- studente
-- appello
+- insegnanti
+- studenti
+- appelli
 
-## table dipartimento:
+## table dipartimenti:
 
-## table corso_laurea:
+- id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
+- nome | VARCHAR(50)
+
+## table corsi_laurea:
+
+- id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
+- nome | VARCHAR(50)
+- dipartimento_id | BIGINT | FOREIGN KEY
 
 ## table materie:
 
-## table insegnante:
+- id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
+- nome | VARCHAR(50)
+- corsi_laurea_id | BIGINT | FOREIGN KEY
 
-## table studente:
+## table insegnanti:
 
-## table appello:
+- id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
+- nome | VARCHAR(50)
+- cognome | VARCHAR(50)
+- materie_id | BIGINT | FOREIGN KEY
+
+## table studenti:
+
+- id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
+- nome | VARCHAR(50)
+- cognome | VARCHAR(50)
+- corsi_laurea_id | BIGINT | FOREIGN KEY
+
+## table appelli :
+
+- id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
+- data | DATE
+- materie_id | BIGINT | FOREIGN KEY
+- insegnanti_id | BIGINT | FOREIGN KEY
+
+## table appello_studente (associazione tra appello e studente many to many):
+
+- id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
+- appelli_id | BIGINT | FOREIGN KEY
+- studenti_id | BIGINT | FOREIGN KEY
+- voto | TINYINT
