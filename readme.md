@@ -55,7 +55,6 @@ Utilizzare https://www.drawio.com/ per la creazione dello schema come visto in c
 - id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
 - data | DATE
 - materie_id | BIGINT | FOREIGN KEY
-- insegnanti_id | BIGINT | FOREIGN KEY
 
 ## table appello_studente (associazione tra appello e studente many to many):
 
