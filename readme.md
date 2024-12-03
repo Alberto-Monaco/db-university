@@ -14,16 +14,16 @@ Utilizzare https://www.drawio.com/ per la creazione dello schema come visto in c
 
 - dipartimento
 - corso di laurea
-- corso
+- materie
 - insegnante
 - studente
 - appello
 
 ## table dipartimento:
 
-## table corso di laurea:
+## table corso_laurea:
 
-## table corso:
+## table materie:
 
 ## table insegnante:
 
