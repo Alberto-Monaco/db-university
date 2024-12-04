@@ -28,15 +28,18 @@ table name:
     FROM students
     WHERE YEAR(date_of_birth) = 1990;
 
-2.  SELECT *
+2.  
+    SELECT *
     FROM courses
     WHERE cfu > 10;
 
-3.  SELECT *
+3.  
+    SELECT *
     FROM students
     WHERE YEAR(NOW()) - YEAR(date_of_birth) > 30;
 
-4.  SELECT *
+4.  
+    SELECT *
     FROM courses
     WHERE period = 'I semestre' AND year = 1;
 
@@ -44,3 +47,25 @@ table name:
     SELECT *
     FROM exams
     WHERE date = "2020-06-20" AND hour > "14:00:00";
+
+6.  
+    SELECT *
+    FROM degrees
+    WHERE level = "magistrale";
+
+7.  
+    SELECT COUNT(*)
+    FROM departments;
+
+8.  
+    SELECT *
+    FROM teachers
+    WHERE phone IS NULL;
+
+
+9.  
+    INSERT INTO students 
+    (name, surname, date_of_birth, fiscal_code, enrolment_date, registration_number, email, degree_id)
+    VALUES 
+    ('Giacomo', 'Poretti', '1976-05-22', 'MRGDFT76H25R089J', '2022-08-01', '12345', 'giacomo.poretti@università.it', 2);
+
