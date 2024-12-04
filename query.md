@@ -69,3 +69,24 @@ table name:
     VALUES 
     ('Giacomo', 'Poretti', '1976-05-22', 'MRGDFT76H25R089J', '2022-08-01', '12345', 'giacomo.poretti@università.it', 2);
 
+10.  
+    SELECT *
+    FROM teachers
+    WHERE name = "Pietro" AND surname = "Rizzo";
+
+    UPDATE teachers
+    SET office_number = "126"
+    WHERE id = 58;
+
+
+11.  
+    SELECT *
+    FROM students
+    WHERE name = "Giacomo" AND surname = "Poretti";
+
+    DELETE 
+    FROM students
+    WHERE id = 5002;
+
+  
+
