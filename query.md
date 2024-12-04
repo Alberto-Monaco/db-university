@@ -11,3 +11,16 @@ TODO:
 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
+
+table name:
+
+- departments
+- degrees
+- courses
+- teachers
+- students
+- exams
+- course_teacher
+- exams_student
+
+1. SELECT * FROM students WHERE YEAR(date_of_birth) = 1990;
