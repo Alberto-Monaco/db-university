@@ -62,7 +62,6 @@ Utilizzare https://www.drawio.com/ per la creazione dello schema come visto in c
 
 ## Pivot: appello_studente
 
-- id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
 - appelli_id | BIGINT | FOREIGN KEY
 - studenti_id | BIGINT | FOREIGN KEY
 - voto | TINYINT
