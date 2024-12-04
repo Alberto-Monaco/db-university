@@ -36,12 +36,16 @@ Utilizzare https://www.drawio.com/ per la creazione dello schema come visto in c
 - nome | VARCHAR(50)
 - corsi_laurea_id | BIGINT | FOREIGN KEY
 
+## Pivot: materia_insegnante
+
+- materie_id | BIGINT | FOREIGN KEY
+- insegnanti_id | BIGINT | FOREIGN KEY
+
 ## table insegnanti:
 
 - id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
 - nome | VARCHAR(50)
 - cognome | VARCHAR(50)
-- materie_id | BIGINT | FOREIGN KEY
 
 ## table studenti:
 
@@ -56,7 +60,7 @@ Utilizzare https://www.drawio.com/ per la creazione dello schema come visto in c
 - data | DATE
 - materie_id | BIGINT | FOREIGN KEY
 
-## table appello_studente (associazione tra appello e studente many to many):
+## Pivot: appello_studente
 
 - id | BIGINT | PRIMARY KEY | AUTO_INCREMENT
 - appelli_id | BIGINT | FOREIGN KEY
