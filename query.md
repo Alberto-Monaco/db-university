@@ -56,11 +56,11 @@ table name:
     WHERE level = "magistrale";
 
 7.  
-    SELECT COUNT(*)
+    SELECT COUNT(id) AS departments_count
     FROM departments;
 
 8.  
-    SELECT COUNT(*)
+    SELECT COUNT(id) AS teachers_count
     FROM teachers
     WHERE phone IS NULL;
 
