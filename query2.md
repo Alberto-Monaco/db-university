@@ -63,3 +63,14 @@ TODO:
     JOIN departments ON degrees.department_id = departments.id
     WHERE departments.name = 'Dipartimento di Neuroscienze'
     AND degrees.level = 'magistrale';
+
+3.  SELECT courses.name, teachers.name, teachers.surname
+    FROM course_teacher
+    JOIN courses ON course_teacher.teacher_id = teachers.id
+    WHERE teachers.id = 44;
+
+4.  SELECT students.id, students.name, students.surname, degrees.name, departments.name
+    FROM students
+    JOIN degrees ON students.degree_id = degrees.id
+    JOIN departments ON degrees.department_id = departments.id
+    ORDER BY students.surname, students.name;
