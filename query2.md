@@ -50,3 +50,16 @@ TODO:
 4.  SELECT COUNT(id) as numero_corsi_laurea, department_id
     FROM degrees
     GROUP BY department_id;
+
+# Joins:
+
+1.  SELECT students.id, students.name, students.surname, degrees.name
+    FROM students
+    JOIN degrees ON students.degree_id = degrees.id
+    WHERE degrees.name = 'Corso di Laurea in Economia';
+
+2.  SELECT degrees.name, degrees.level
+    FROM degrees
+    JOIN departments ON degrees.department_id = departments.id
+    WHERE departments.name = 'Dipartimento di Neuroscienze'
+    AND degrees.level = 'magistrale';
